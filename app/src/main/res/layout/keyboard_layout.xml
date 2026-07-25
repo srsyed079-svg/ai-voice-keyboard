@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="8dp"
+    android:background="@color/keyboard_background">
+
+    <ImageButton
+        android:id="@+id/voice_button"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_margin="4dp"
+        android:contentDescription="@string/voice_input"
+        android:scaleType="centerInside"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:src="@android:drawable/ic_btn_speak_now" />
+
+    <ImageButton
+        android:id="@+id/camera_button"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_margin="4dp"
+        android:contentDescription="@string/camera_capture"
+        android:scaleType="centerInside"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:src="@android:drawable/ic_menu_camera" />
+
+    <Space
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1" />
+
+    <ToggleButton
+        android:id="@+id/mode_toggle"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_margin="4dp"
+        android:textOn="@string/private_mode"
+        android:textOff="@string/inject_mode"
+        android:background="?attr/selectableItemBackgroundBorderless" />
+
+    <Button
+        android:id="@+id/settings_button"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_margin="4dp"
+        android:contentDescription="@string/settings"
+        android:text="⚙"
+        android:textSize="24sp"
+        android:background="?attr/selectableItemBackgroundBorderless" />
+
+</LinearLayout>
