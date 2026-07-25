@@ -20,14 +20,10 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
 
-    - name: Generate Gradle Wrapper
-      run: gradle wrapper
-
-    - name: Make gradlew executable
-      run: chmod +x ./gradlew
-
-    - name: Build Debug APK
-      run: ./gradlew assembleDebug --no-daemon
+    - name: Setup and Build Gradle
+      uses: gradle/gradle-build-action@v3
+      with:
+        arguments: assembleDebug --no-daemon -Dorg.gradle.jvmargs="-Xmx2048m"
 
     - name: Upload APK as artifact
       uses: actions/upload-artifact@v4
